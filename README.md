@@ -75,29 +75,6 @@
 2. Nhấp đúp chạy `BIM_QAQC_Setup.exe` và làm theo hướng dẫn trên màn hình.
 3. Phần mềm sẽ tự động tạo biểu tượng Lối tắt trên Desktop & Start Menu với Logo dự án sắc nét.
 
-### B. Dành Cho Ban Quản Trị / Cấp License Key (`BIM_QAQC_KeyGen.exe`)
-
-1. Khởi chạy công cụ cấp key: **`dist/BIM_QAQC_KeyGen/BIM_QAQC_KeyGen.exe`**.
-2. Dán **Machine ID** do khách hàng gửi từ màn hình kích hoạt.
-3. Chọn thời hạn (`1 Tháng`, `3 Tháng`, `6 Tháng`, `1 Năm`, `3 Năm` hoặc `Vĩnh Viễn`).
-4. Nhấp nút **`⚡ SINH LICENSE KEY NGAY`** và bấm **`📋 SAO CHÉP KEY`** để gửi cho khách hàng.
-
-### C. Dành Cho Nhà Phát Triển (Chạy Từ Mã Nguồn)
-
-```bash
-# 1. Cài đặt các thư viện phụ thuộc
-pip install -r requirements.txt
-
-# 2. Thiết lập môi trường UTF-8 trên Windows PowerShell
-$env:PYTHONIOENCODING="utf-8"
-
-# 3. Khởi chạy giao diện ứng dụng
-python BIM_QAQC_App_UI.py
-
-# 4. Đóng gói bộ cài đặt chính thức (Inno Setup)
-build.bat
-```
-
 ---
 
 ## 📋 Yêu Cầu Hệ Thống

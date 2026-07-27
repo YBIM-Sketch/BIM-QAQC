@@ -118,12 +118,6 @@ Tài liệu này hướng dẫn chi tiết toàn bộ quy trình vận hành ph�
 2. Sao chép dòng **Machine ID** (dạng `XXXX-XXXX-XXXX`) gửi cho Ban Quản trị / Mr. Y.
 3. Nhập **License Key** và **Ngày Hết Hạn** nhận được $\rightarrow$ Click **"Kích Hoạt Bản Quyền"**.
 
-### B. Sử Dụng Công Cụ Sinh Key Cho Ban Quản Trị (`BIM_QAQC_KeyGen.exe`)
-1. Mở công cụ: [dist/BIM_QAQC_KeyGen/BIM_QAQC_KeyGen.exe](file:///d:/BIM%20QAQC_v0.1.0/dist/BIM_QAQC_KeyGen/BIM_QAQC_KeyGen.exe).
-2. Nhập **Machine ID** của khách hàng vào ô số 1.
-3. Chọn thời hạn bản quyền (`1 Tháng`, `3 Tháng`, `6 Tháng`, `1 Năm`, `3 Năm` hoặc `Vĩnh Viễn`).
-4. Nhấp nút **`⚡ SINH LICENSE KEY NGAY`**.
-5. Nhấp **`📋 SAO CHÉP KEY & THÔNG TIN`** để gửi thông tin kích hoạt cho khách hàng.
 
 ---
 

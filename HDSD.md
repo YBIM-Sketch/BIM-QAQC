@@ -1,33 +1,42 @@
-# HƯỚNG DẪN SỬ DỤNG PHẦN MỀM BIM QAQC (v0.1.0)
+# HƯỚNG DẪN SỬ DỤNG PHẦN MỀM BIM QAQC (v0.2.0)
 
-Tài liệu này hướng dẫn chi tiết toàn bộ quy trình vận hành phần mềm **BIM QAQC v0.1.0** phục vụ công tác kiểm định chất lượng mô hình BIM, trích xuất khối lượng QTO và lập bộ hồ sơ tiếp nhận bàn giao theo **Quyết định 333/QĐ-CĐBVN** của Cục Đường bộ Việt Nam.
+Tài liệu này hướng dẫn chi tiết toàn bộ quy trình vận hành phần mềm **BIM QAQC v0.2.0** phục vụ công tác kiểm định chất lượng mô hình BIM, trích xuất khối lượng QTO, lập bộ hồ sơ tiếp nhận bàn giao theo **Quyết định 333/QĐ-CĐBVN** của Cục Đường bộ Việt Nam, tích hợp Trợ lý Giọng nói AI Offline và Trình xem 3D Viewer Zero-Wait.
 
 ---
 
 ## 📖 Mục Lục
-1. [Khởi Động & Chọn Thư Mục Dự Án](#1-khởi-động--chọn-thư-mục-dự-án)
-2. [Bước 1: Kiểm Tra Quy Chuẩn CDE & Sync Đám Mây](#2-bước-1-kiểm-tra-quy-chuẩn-cde--sync-đám-mây)
+
+1. [Khởi Động &amp; Chọn Thư Mục Dự Án](#1-khởi-động--chọn-thư-mục-dự-án)
+2. [Bước 1: Kiểm Tra Quy Chuẩn CDE &amp; Sync Đám Mây](#2-bước-1-kiểm-tra-quy-chuẩn-cde--sync-đám-mây)
 3. [Bước 2: Bóc Tách Khối Lượng IFC sang SQLite Hub](#3-bước-2-bóc-tách-khối-lượng-ifc-sang-sqlite-hub)
-4. [Bước 3: Kiểm Định Mức Độ Thông Tin LOI & Vòng Lặp Tự Học](#4-bước-3-kiểm-định-mức-độ-thông-tin-loi--vòng-lặp-tự-học)
-5. [Bước 4: Lập Bộ Hồ Sơ Báo Cáo QĐ-333 & ISO 19650](#5-bước-4-lập-bộ-hồ-sơ-báo-cáo-qđ-333--iso-19650)
-6. [Bước 5: Trình Xem 3D Viewer Siêu Tốc & Bản Đồ Nhiệt](#6-bước-5-trình-xem-3d-viewer-siêu-tốc--bản-đồ-nhiệt)
-7. [Hướng Dẫn Công Cụ Chuyên Gia & Vá Thuộc Tính 1-Click](#7-hướng-dẫn-công-cụ-chuyên-gia--vá-thuộc-tính-1-click)
-8. [Hướng Dẫn Kích Hoạt License & Sử Dụng KeyGenerator](#8-hướng-dẫn-kích-hoạt-license--sử-dụng-keygenerator)
+4. [Bước 3: Kiểm Định Mức Độ Thông Tin LOI &amp; Vòng Lặp Tự Học](#4-bước-3-kiểm-định-mức-độ-thông-tin-loi--vòng-lặp-tự-học)
+5. [Bước 4: Lập Bộ Hồ Sơ Báo Cáo QĐ-333 &amp; ISO 19650](#5-bước-4-lập-bộ-hồ-sơ-báo-cáo-qđ-333--iso-19650)
+6. [Bước 5: Trình Xem 3D Viewer Zero-Wait &amp; Bản Đồ Nhiệt](#6-bước-5-trình-xem-3d-viewer-zero-wait--bản-đồ-nhiệt)
+7. [Hướng Dẫn Công Cụ Chuyên Gia &amp; Vá Thuộc Tính 1-Click](#7-hướng-dẫn-công-cụ-chuyên-gia--vá-thuộc-tính-1-click)
+8. [Hướng Dẫn Kích Hoạt License &amp; Sử Dụng KeyGenerator](#8-hướng-dẫn-kích-hoạt-license--sử-dụng-keygenerator)
 9. [Các Câu Hỏi Thường Gặp (FAQs)](#9-các-câu-hỏi-thường-gặp-faqs)
 
 ---
 
 ## 1. Khởi Động & Chọn Thư Mục Dự Án
 
-### A. Phương thức 1: Bản Cài Đặt Thương Mại (Setup Wizard - Khuyên dùng)
-1. **Chạy tệp cài đặt**: Nhấp đúp vào tệp `Output\BIM_QAQC_Setup.exe`.
-2. **Đồng ý điều khoản (EULA)**: Đọc và nhấp chọn **"I accept the agreement"** để tiếp tục.
-3. **Hoàn tất cài đặt**: Mở ứng dụng từ biểu tượng **BIM QAQC** ngoài màn hình Desktop.
+### A. Phương thức 1: Bản Thực Thi Độc Lập Quick Build (Khuyên dùng)
+
+1. **Chạy tệp ứng dụng**: Nhấp đúp vào tệp `dist\BIM_QAQC_App_UI\BIM_QAQC_App_UI.exe`.
+2. **Khởi chạy tức thì**: Màn hình chờ C-Bootloader hiển thị logo ngay ở **0.05 giây** và nạp ứng dụng mượt mà.
 
 ### B. Chọn Thư Mục Làm Việc (Workspace Folder)
+
 1. Click nút **"📁 Chọn Thư Mục Dự Án"** tại góc trên bên trái màn hình chính.
 2. Trỏ tới thư mục chứa các tệp tin mô hình `.ifc` / `.rvt` của dự án.
 3. **Cơ chế Zero-Wait**: Ngay khi chọn thư mục, hệ thống tự động kích hoạt luồng dịch 3D ngầm (`Zero Wait Pre-processing`), giúp nạp sẵn dữ liệu 3D mà không làm gián đoạn công việc của bạn.
+
+### C. Màn Hình Chờ Khởi Động Tức Thì (C-Bootloader Native Splash Screen)
+
+1. **Hiển thị tức thì ở miligiây 0.05**: Ngay khi nhấp đúp file `BIM_QAQC_App_UI.exe`, màn hình chờ logo thương hiệu xuất hiện ngay lập tức trong 0.05 giây.
+2. **Duy trì hiển thị liên tục**: Màn hình chờ giữ nguyên trong suốt quá trình nạp bộ nhớ CSDL SQLite, xác thực license và khởi tạo giao diện ứng dụng.
+3. **Cập nhật tiến trình**: Liên tục báo trạng thái nạp (`⚡ Đang xác thực bản quyền...`, `⚡ Đang dựng giao diện...`).
+4. **Tự động đóng mượt mà**: Đóng màn hình chờ và mở cửa sổ chính ngay khi ứng dụng đã nạp xong 100%.
 
 ---
 
@@ -57,9 +66,14 @@ Tài liệu này hướng dẫn chi tiết toàn bộ quy trình vận hành ph�
 ## 4. Bước 3: Kiểm Định Mức Độ Thông Tin LOI & Vòng Lặp Tự Học
 
 * **Mục đích**: Kiểm định tính đầy đủ của thông tin (Level of Information - LOI) của từng cấu kiện theo giai đoạn thiết kế (`LOD 200`, `LOD 350`, `LOD 400`).
+* **Chọn Nhanh Bộ Môn Hạ Tầng (`Domain Preset Selector`)**:
+  * Chọn bộ môn đặc thù tại ComboBox **`🎛️ BỘ MÔN HẠ TẦNG (PRESET)`** trên Sidebar (`🌉 Hạ tầng Cầu`, `🛣️ Hạ tầng Đường bộ`, `🚇 Hạ tầng Hầm & Cống`). Hệ thống sẽ tự động áp bộ quy tắc thuộc tính chuẩn 100% cho bộ môn đó.
 * **Quy trình chuẩn IDS buildingSMART**:
   1. Phần mềm tự động chuyển dịch quy tắc từ `loi_config.json` thành tệp XML chuẩn IDS (Information Delivery Specification).
   2. Engine `ifctester` chạy kiểm định chính xác 100%, loại bỏ lỗi báo sai thuộc tính chéo giữa các loại cấu kiện.
+* **Nút "Fast-Fix Vá Tự Động 1-Click" Ngay Trên Dashboard**:
+  * Khi Bước 3 kết thúc và báo lỗi tại thẻ metric **`❌ Lỗi LOI`**, nhấp nút màu cam **`🪄 Vá Nhanh`** trực tiếp trên thẻ.
+  * Phần mềm tự nhận diện file Excel mẫu đã điền $\rightarrow$ vá trực tiếp thuộc tính vào IFC gốc (kèm file sao lưu `*_backup.ifc`) $\rightarrow$ tự động chạy lại kiểm định trong 2 giây đưa chỉ số đạt lên 100% màu xanh lá!
 * **Trợ Lý AI & Neural Risk Scorer**:
   * Chấm điểm % rủi ro sai lệch khối lượng của từng cấu kiện.
   * Tự động sinh lời khuyên chuyên môn định dạng Pydantic chuẩn hóa.
@@ -88,7 +102,8 @@ Tài liệu này hướng dẫn chi tiết toàn bộ quy trình vận hành ph�
 * **Thao tác điều khiển**:
   * **Xoay (Orbit)**: Nhấn giữ **Chuột Trái** (Tâm xoay tự động bám vào vị trí con trỏ).
   * **Trượt (Pan)**: Nhấn giữ **Chuột Phải**.
-  * **Ph phóng (Zoom)**: Lăn **Con Cuộn Chuột** (Focus chuẩn xác theo vị trí trỏ chuột).
+  * **Thu phóng (Zoom)**: Lăn **Con Cuộn Chuột** (Focus chuẩn xác theo vị trí trỏ chuột).
+  * **Định vị nhanh (Focus & Model Tree)**: Nhấp chuột vào bất kỳ cấu kiện nào trong cửa sổ 3D hoặc trên Cây phân cấp (Model Tree) để tự động zoom mượt camera tới cấu kiện đó và hiển thị đầy đủ bảng thuộc tính.
 * **Trực quan Bản đồ nhiệt (Heatmap)**:
   * 🟢 **Màu Xanh Lục**: Cấu kiện Đạt 100% LOI.
   * 🔴 **Màu Đỏ**: Cấu kiện Không đạt / Thiếu thuộc tính LOI.
@@ -98,15 +113,18 @@ Tài liệu này hướng dẫn chi tiết toàn bộ quy trình vận hành ph�
 ## 7. Hướng Dẫn Công Cụ Chuyên Gia & Vá Thuộc Tính 1-Click
 
 ### A. Vá Thuộc Tính Hàng Loạt Từ Excel (1-Click Patching)
+
 1. Trên thanh Sidebar, chọn mục **`🛠️ CÔNG CỤ CHUYÊN GIA`** $\rightarrow$ Click nút **`🪄 TỰ ĐỘNG VÁ LỖI IFC`**.
 2. Chọn tệp tin IFC gốc cần sửa.
 3. Click nút **`📊 VÁ HÀNG LOẠT TỪ EXCEL`** và chọn tệp Excel LOI Mẫu đã được điền thuộc tính.
 4. Hệ thống tự động quét GUID, ghi đè thuộc tính vào IFC gốc và tạo bản sao lưu an toàn `*_backup.ifc`.
 
 ### B. Lọc Làm Sạch Mô Hình (IFC Sanitizer)
+
 * Click nút **`🧹 LỌC LÀM SẠCH IFC`** để lọc bỏ cốt thép/bu-lông chi tiết, giảm 70-90% dung lượng file siêu nặng.
 
 ### C. Đối Soát Phiên Bản Mô Hình (Version Comparer)
+
 * Click nút **`⚖️ SO SÁNH PHIÊN BẢN`** để chạy so khớp thể tích DuckDB giữa 2 phiên bản IFC.
 
 ---
@@ -114,12 +132,11 @@ Tài liệu này hướng dẫn chi tiết toàn bộ quy trình vận hành ph�
 ## 8. Hướng Dẫn Kích Hoạt License & Sử Dụng KeyGenerator
 
 ### A. Kích Hoạt Bản Quyền Trên BIM QAQC (Máy Khách Hàng)
+
 1. Khi khởi chạy ứng dụng, nếu chưa kích hoạt, cửa sổ **BIM QAQC License Manager** sẽ xuất hiện.
 2. Sao chép dòng **Machine ID** (dạng `XXXX-XXXX-XXXX`) gửi cho Ban Quản trị / Mr. Y.
 3. Nhập **License Key** và **Ngày Hết Hạn** nhận được $\rightarrow$ Click **"Kích Hoạt Bản Quyền"**.
 
-
----
 
 ## 9. Các Câu Hỏi Thường Gặp (FAQs)
 
